@@ -3,7 +3,7 @@
   "branchVersion": "1.0.*",
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelkrog/tel.js.git"
+    "url": "https://github.com/adrianbardan/tel.js.git"
   },
   "devDependencies": {
     "bower": "~1.2.2",
