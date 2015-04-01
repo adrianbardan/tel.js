@@ -73,6 +73,9 @@ angular.module('teljs')
                         return formatResult.number !== '' ? '+' + teljs.trimNumber(formatResult.number) : '';
                     };
 
+                    ngModel.$formatters = [];
+                    ngModel.$parsers = [];
+
                     ngModel.$formatters.push(scope.formatNumber);
                     ngModel.$parsers.push(scope.parseNumber);
 
