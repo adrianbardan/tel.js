@@ -25,7 +25,16 @@ angular.module('teljs')
                     }
 
                     element.on('blur', function () {
-                        if (ngModel.$valid) {
+                        scope.international = attrs.international;
+                        scope.defaultAreaCode = attrs.defaultAreaCode;
+
+                        if (scope.international !== 'false') {
+                            scope.mode = 'e164';
+                        } else {
+                            scope.mode = 'national';
+                        }
+
+                        if (ngModel.$valid || true) {
                             ngModel.$setViewValue(scope.formatNumber(ngModel.$modelValue));
                             ngModel.$render();
                         }
